@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "unipop.style-profile/1",
+  "title": "UniPop Style Profile",
+  "description": "Profil de style produit par Cameron à partir des références UniPop, importé dans UniPop Visual Studio.",
+  "type": "object",
+  "required": [
+    "schema",
+    "name",
+    "version",
+    "palette",
+    "generation"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "enum": [
+        "unipop.style-profile/1"
+      ],
+      "description": "Identifiant du schéma, toujours \"unipop.style-profile/1\""
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom du profil"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "description": "Version du profil, par exemple 1.0.0"
+    },
+    "author": {
+      "type": "string",
+      "description": "Auteur de l’analyse, par exemple Cameron"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Date ISO 8601"
+    },
+    "description": {
+      "type": "string",
+      "description": "Résumé du profil en une ou deux phrases"
+    },
+    "palette": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "description": "Couleurs dominantes",
+      "items": {
+        "type": "object",
+        "required": [
+          "hex"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom de la couleur"
+          },
+          "hex": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$",
+            "description": "Valeur HEX sur 6 chiffres, par exemple #1F3A5F"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "secondary",
+              "accent",
+              "background",
+              "text",
+              "neutral"
+            ]
+          },
+          "usage": {
+            "type": "string",
+            "description": "Où et comment la couleur est utilisée"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "assumed"
+            ],
+            "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+          }
+        }
+      }
+    },
+    "illustration": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string",
+          "description": "Style d’illustration"
+        },
+        "imagery": {
+          "type": "string",
+          "description": "Langage visuel, sujets, ambiance"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Mots-clés de style"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "assumed"
+          ],
+          "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Règles de composition"
+        },
+        "layouts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Mises en page typiques"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "assumed"
+          ],
+          "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "headings": {
+          "type": "object",
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "Famille de la police de titre"
+            },
+            "weight": {
+              "type": "string",
+              "description": "Graisse"
+            },
+            "case": {
+              "type": "string",
+              "description": "Casse"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "observed",
+                "assumed"
+              ],
+              "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+            }
+          }
+        },
+        "body": {
+          "type": "object",
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "Famille de la police de texte"
+            },
+            "weight": {
+              "type": "string",
+              "description": "Graisse"
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "observed",
+                "assumed"
+              ],
+              "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+            }
+          }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Remarques typographiques"
+        }
+      }
+    },
+    "backgrounds": {
+      "type": "object",
+      "properties": {
+        "types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Types de fonds"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Remarques"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "assumed"
+          ],
+          "description": "observed = visible dans les références ; assumed = hypothèse à confirmer"
+        }
+      }
+    },
+    "graphicElements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Éléments graphiques récurrents"
+    },
+    "branding": {
+      "type": "object",
+      "properties": {
+        "logoRules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Règles d’usage du logo"
+        },
+        "placement": {
+          "type": "string",
+          "enum": [
+            "top-left",
+            "top-right",
+            "bottom-left",
+            "bottom-right",
+            "center"
+          ],
+          "description": "Position habituelle du logo"
+        },
+        "minSizePercent": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Largeur minimale du logo en % de la largeur du visuel"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Remarques"
+        }
+      }
+    },
+    "formats": {
+      "type": "array",
+      "description": "Formats recommandés",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "width",
+          "height"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Nom du format"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 64,
+            "maximum": 8000
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 64,
+            "maximum": 8000
+          }
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "required": [
+        "positive"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "Description du style en une phrase, placée en tête du prompt"
+        },
+        "positive": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Consignes à suivre"
+        },
+        "negative": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Éléments à éviter"
+        }
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "description": "Exemples de sujets",
+      "items": {
+        "type": "object",
+        "required": [
+          "title"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Titre court"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "Description du sujet"
+          }
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Points que l’analyse n’a pas pu établir avec certitude"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/* Jetons de design. L'accent (--accent) est remplacé au chargement par la couleur principale du profil importé. */
+:root {
+  --font: "Gotham", "Gotham Pro", "Avenir Next", "Avenir", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  --accent: #F2C14E;
+  --accent-ink: #141414;
+  --r-panel: 16px;
+  --r-ctl: 9px;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --danger: #E5604F;
+  --ok: #4FB87E;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1E1F22;
+  --pool: rgba(255, 255, 255, .045);
+  --panel: rgba(46, 47, 52, .62);
+  --solid: #2A2B30;
+  --raise: rgba(255, 255, 255, .055);
+  --raise-2: rgba(255, 255, 255, .1);
+  --line: rgba(255, 255, 255, .085);
+  --line-2: rgba(255, 255, 255, .18);
+  --ink: #EFEDE8;
+  --ink-2: #B9B7B2;
+  --ink-3: #85848A;
+  --shadow: 0 24px 70px rgba(0, 0, 0, .5);
+  --board-shadow: 0 30px 90px rgba(0, 0, 0, .55), 0 2px 10px rgba(0, 0, 0, .3);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #DCDAD5;
+  --pool: rgba(255, 255, 255, .55);
+  --panel: rgba(250, 249, 247, .7);
+  --solid: #F6F5F2;
+  --raise: rgba(20, 20, 25, .045);
+  --raise-2: rgba(20, 20, 25, .09);
+  --line: rgba(20, 20, 25, .1);
+  --line-2: rgba(20, 20, 25, .24);
+  --ink: #1C1D20;
+  --ink-2: #4E4F54;
+  --ink-3: #7C7C80;
+  --shadow: 0 24px 60px rgba(40, 38, 30, .22);
+  --board-shadow: 0 30px 80px rgba(40, 38, 30, .28), 0 2px 8px rgba(40, 38, 30, .14);
+}

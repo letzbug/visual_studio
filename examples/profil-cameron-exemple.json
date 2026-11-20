@@ -1,0 +1,150 @@
+{
+  "schema": "unipop.style-profile/1",
+  "name": "Profil d’exemple (fictif)",
+  "version": "0.1.0",
+  "author": "UniPop Visual Studio",
+  "createdAt": "2026-11-20",
+  "description": "Profil de démonstration. Il ne décrit pas l’identité réelle d’UniPop : remplacez-le par le profil établi par Cameron.",
+  "palette": [
+    {
+      "name": "Bleu nuit",
+      "hex": "#1F3A5F",
+      "role": "primary",
+      "usage": "Grandes surfaces, formes principales",
+      "confidence": "assumed"
+    },
+    {
+      "name": "Corail",
+      "hex": "#F26B4E",
+      "role": "accent",
+      "usage": "Points d’attention",
+      "confidence": "assumed"
+    },
+    {
+      "name": "Jaune soleil",
+      "hex": "#F6C445",
+      "role": "secondary",
+      "usage": "Formes secondaires",
+      "confidence": "assumed"
+    },
+    {
+      "name": "Vert d’eau",
+      "hex": "#2FA39A",
+      "role": "secondary",
+      "usage": "Formes secondaires",
+      "confidence": "assumed"
+    },
+    {
+      "name": "Ivoire",
+      "hex": "#F7F3EA",
+      "role": "background",
+      "usage": "Fonds",
+      "confidence": "assumed"
+    },
+    {
+      "name": "Encre",
+      "hex": "#1D1D1B",
+      "role": "text",
+      "usage": "Textes",
+      "confidence": "assumed"
+    }
+  ],
+  "illustration": {
+    "style": "Illustration vectorielle en aplats, formes géométriques simples, sans dégradés ni contours",
+    "imagery": "Personnages stylisés et objets du quotidien, ton chaleureux et accessible",
+    "keywords": [
+      "flat design",
+      "géométrique",
+      "chaleureux"
+    ],
+    "confidence": "assumed"
+  },
+  "composition": {
+    "rules": [
+      "Un sujet principal net, légèrement décentré",
+      "Grandes zones de respiration",
+      "Trois à quatre couleurs par visuel au maximum"
+    ],
+    "layouts": [
+      "Sujet à gauche, espace libre à droite",
+      "Sujet centré sur fond uni"
+    ],
+    "confidence": "assumed"
+  },
+  "typography": {
+    "headings": {
+      "family": "Gotham",
+      "weight": "Bold",
+      "case": "Bas de casse",
+      "confidence": "assumed"
+    },
+    "body": {
+      "family": "Gotham",
+      "weight": "Book",
+      "confidence": "assumed"
+    },
+    "notes": "Une seule famille de caractères par visuel."
+  },
+  "backgrounds": {
+    "types": [
+      "Aplat uni clair",
+      "Aplat de couleur principale"
+    ],
+    "notes": "Pas de photo en arrière-plan.",
+    "confidence": "assumed"
+  },
+  "graphicElements": [
+    "Cercles et demi-cercles",
+    "Bandes diagonales",
+    "Trames de points"
+  ],
+  "branding": {
+    "logoRules": [
+      "Logo sur fond uni uniquement",
+      "Zone de protection égale à la hauteur du logo"
+    ],
+    "placement": "bottom-right",
+    "minSizePercent": 14,
+    "notes": ""
+  },
+  "formats": [
+    {
+      "label": "Affiche A4",
+      "width": 2480,
+      "height": 3508
+    }
+  ],
+  "generation": {
+    "summary": "Illustration vectorielle en aplats, géométrique et chaleureuse",
+    "positive": [
+      "Aplats de couleur nets, bords francs",
+      "Formes géométriques simples",
+      "Composition aérée avec espace libre",
+      "Palette limitée aux couleurs du profil"
+    ],
+    "negative": [
+      "photoréalisme",
+      "dégradés",
+      "ombres portées",
+      "rendu 3D",
+      "détails surchargés"
+    ]
+  },
+  "subjects": [
+    {
+      "title": "Atelier collectif",
+      "prompt": "Un groupe d’adultes autour d’une table pendant un atelier"
+    },
+    {
+      "title": "Cours de langue",
+      "prompt": "Deux personnes en conversation, bulles de dialogue stylisées sans texte"
+    },
+    {
+      "title": "Atelier numérique",
+      "prompt": "Une personne devant un ordinateur portable, entourée de formes abstraites"
+    }
+  ],
+  "uncertainties": [
+    "Toutes les valeurs de ce profil sont des exemples."
+  ]
+}

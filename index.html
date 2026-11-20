@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniPop Visual Studio</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/studio.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar"></header>
+  <aside id="left" class="panel" aria-label="Bibliothèque créative"></aside>
+  <main id="stage" aria-label="Plan de travail"></main>
+  <aside id="right" class="panel" aria-label="Réglages"></aside>
+</div>
+<div id="overlays"></div>
+<div id="toasts" aria-live="polite"></div>
+
+<!-- Scripts classiques (pas de modules) : l'application démarre aussi en file:// par double-clic. -->
+<script src="js/config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/db.js"></script>
+<script src="js/core/store.js"></script>
+<script src="js/style/schema.js"></script>
+<script src="js/style/prompt-engine.js"></script>
+<script src="js/style/color-measure.js"></script>
+<script src="js/ai/pipeline.js"></script>
+<script src="js/ui/dialogs.js"></script>
+<script src="js/ui/library.js"></script>
+<script src="js/ui/profile.js"></script>
+<script src="js/ui/stage.js"></script>
+<script src="js/ui/inspector.js"></script>
+<script src="js/ui/export.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
