@@ -1,0 +1,8 @@
+1. Nur nach IT-Freigabe einsetzen. Referenzen nur mit Nutzungsrecht und ohne personenbezogene Daten übertragen.
+2. Worker aus diesem Ordner mit Wrangler bereitstellen: npx wrangler deploy (auf privatem Rechner oder genehmigter CI).
+3. npx wrangler secret put OPENAI_API_KEY
+4. npx wrangler secret put STUDIO_ACCESS_CODE (zufälliger Code, mindestens 24 Zeichen).
+5. ALLOWED_ORIGIN in wrangler.toml anpassen, OPENAI_IMAGE_MODEL mit dem im API-Projekt verfügbaren Images-Modell abgleichen.
+6. Worker-HTTPS-URL in js/config.js unter workerUrl eintragen. Website am bisherigen Origin öffnen, damit IndexedDB erhalten bleibt. Optionen de génération > Moteur > OpenAI Images.
+7. Optional bis zu drei als Stil markierte, nicht ausgeschlossene Referenzen aktivieren. Jede Übertragung wird bestätigt. Code wird nicht gespeichert.
+8. Limit: 20 angeforderte Bilder pro UTC-Tag, auch fehlgeschlagene API-Aufrufe zählen. Kein festes Euro-Limit. Modell und API live testen. Kein API-Key im Frontend.

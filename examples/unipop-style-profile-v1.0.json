@@ -1,0 +1,212 @@
+{
+  "schema": "unipop.style-profile/1",
+  "name": "UniPop – Identité visuelle",
+  "version": "1.0.0",
+  "author": "Cameron",
+  "createdAt": "2026-11-24",
+  "description": "Analyse de 11 captures UniPop : illustration éditoriale vectorielle dominante, couleurs franches et motifs décoratifs récurrents. Palette indicative, non officielle.",
+  "palette": [
+    {
+      "name": "Marine",
+      "hex": "#15205C",
+      "role": "primary",
+      "usage": "Fond, texte, pastilles",
+      "confidence": "observed"
+    },
+    {
+      "name": "Vert",
+      "hex": "#3DA66C",
+      "role": "secondary",
+      "usage": "Fond et végétation",
+      "confidence": "observed"
+    },
+    {
+      "name": "Rose",
+      "hex": "#BF6EAD",
+      "role": "background",
+      "usage": "Fond",
+      "confidence": "observed"
+    },
+    {
+      "name": "Corail",
+      "hex": "#D96565",
+      "role": "background",
+      "usage": "Fond",
+      "confidence": "observed"
+    },
+    {
+      "name": "Turquoise",
+      "hex": "#AFE0E1",
+      "role": "secondary",
+      "usage": "Fond et pastilles",
+      "confidence": "observed"
+    },
+    {
+      "name": "Moutarde",
+      "hex": "#C5B500",
+      "role": "background",
+      "usage": "Fond",
+      "confidence": "observed"
+    },
+    {
+      "name": "Violet",
+      "hex": "#7970B3",
+      "role": "background",
+      "usage": "Fond",
+      "confidence": "observed"
+    },
+    {
+      "name": "Terracotta",
+      "hex": "#BE6D40",
+      "role": "background",
+      "usage": "Fond",
+      "confidence": "observed"
+    },
+    {
+      "name": "Jaune soleil",
+      "hex": "#F8D83A",
+      "role": "accent",
+      "usage": "Étoiles et objets",
+      "confidence": "observed"
+    },
+    {
+      "name": "Blanc cassé",
+      "hex": "#FFF8E9",
+      "role": "text",
+      "usage": "Titres et objets",
+      "confidence": "observed"
+    },
+    {
+      "name": "Orange",
+      "hex": "#F16D46",
+      "role": "accent",
+      "usage": "Petits détails",
+      "confidence": "observed"
+    }
+  ],
+  "illustration": {
+    "style": "Illustration éditoriale 2D en aplats, aspect vectoriel, contours rarement visibles, formes arrondies et silhouettes simplifiées.",
+    "imagery": "Adultes chaleureux, objets immédiatement reconnaissables, apprentissage et culture, diversité naturelle. Une référence photographique/3D constitue une exception.",
+    "keywords": [
+      "flat vector",
+      "editorial illustration",
+      "solid color",
+      "organic shapes",
+      "adult education",
+      "playful minimalism"
+    ],
+    "confidence": "observed"
+  },
+  "composition": {
+    "rules": [
+      "Un sujet principal lisible, éventuellement deux ou trois objets liés.",
+      "Privilégier les grands aplats et une hiérarchie simple.",
+      "Réserver une zone calme pour un éventuel titre ajouté séparément.",
+      "Décorations périphériques peu nombreuses, sans gêner le sujet."
+    ],
+    "layouts": [
+      "Titre en haut, illustration en bas",
+      "Illustration en haut, titre en bas",
+      "Sujet central avec espace négatif"
+    ],
+    "confidence": "observed"
+  },
+  "typography": {
+    "headings": {
+      "family": "Sans-serif arrondie, famille exacte inconnue",
+      "weight": "extra-bold",
+      "case": "Casse naturelle",
+      "confidence": "observed"
+    },
+    "body": {
+      "family": "Sans-serif, famille exacte inconnue",
+      "weight": "regular à medium",
+      "confidence": "observed"
+    },
+    "notes": "Texte blanc sur fond foncé ou marine sur fond clair. Pastilles arrondies pour catégories et dates. Ajouter le texte en calque séparé."
+  },
+  "backgrounds": {
+    "types": [
+      "Aplat coloré",
+      "Aplat avec bande de sol plus sombre",
+      "Dégradé doux exceptionnel"
+    ],
+    "notes": "Une couleur dominante par visuel. Ombres simples et plates.",
+    "confidence": "observed"
+  },
+  "graphicElements": [
+    "Petites étoiles jaunes à quatre pointes",
+    "Boucles et traits fins clairs",
+    "Feuilles tropicales stylisées",
+    "Zigzags fins",
+    "Points colorés",
+    "Ombres elliptiques",
+    "Pastilles arrondies pour métadonnées"
+  ],
+  "branding": {
+    "logoRules": [
+      "Ne jamais générer ni imiter le logo.",
+      "Ajouter uniquement le fichier officiel en calque séparé si demandé.",
+      "Les badges Nordstad sont spécifiques aux campagnes concernées."
+    ],
+    "notes": "Position et taille officielles non établies."
+  },
+  "formats": [
+    {
+      "label": "Portrait 4:5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "label": "Story 9:16",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "label": "Carré",
+      "width": 1080,
+      "height": 1080
+    }
+  ],
+  "generation": {
+    "summary": "Illustration éditoriale UniPop pour la formation des adultes : aplats vectoriels chaleureux, formes simples et organiques, fond franc, accents décoratifs discrets.",
+    "positive": [
+      "Créer une illustration originale en lien direct avec le sujet.",
+      "Utiliser un fond dominant et une sélection restreinte de la palette, avec contraste marine ou crème.",
+      "Dessiner des adultes stylisés aux proportions simplifiées, expressions naturelles et vêtements sobres si le sujet le nécessite.",
+      "Objets lisibles, silhouettes arrondies, aplats opaques, ombres graphiques simples.",
+      "Ajouter quelques étoiles jaunes, boucles fines ou feuilles stylisées si pertinent, sans imposer tous les motifs.",
+      "Préserver un espace négatif utile pour un titre éventuel.",
+      "Par défaut produire uniquement le visuel sans texte, sans logo ni badge; utiliser les calques séparés."
+    ],
+    "negative": [
+      "Photorealisme et stock photo dans le mode illustration standard",
+      "Rendu 3D brillant, plastique, néon, gradients complexes",
+      "Esthétique enfantine, mascottes infantiles, anatomie exagérée",
+      "Fond encombré, détails excessifs, textures réalistes",
+      "Texte inventé, lettres illisibles, filigranes, logos ou badges imités",
+      "Copie exacte des compositions de référence"
+    ]
+  },
+  "subjects": [
+    {
+      "title": "Photographie",
+      "prompt": "Appareil photo bleu marine et jaune, deux tirages stylisés sur fond corail."
+    },
+    {
+      "title": "Atelier de poterie",
+      "prompt": "Mains adultes façonnant un vase, formes simples sur fond violet."
+    },
+    {
+      "title": "Formation numérique",
+      "prompt": "Ordinateur et tablette stylisés sur fond turquoise."
+    }
+  ],
+  "uncertainties": [
+    "Codes HEX approximatifs issus des captures, non validés par la charte officielle.",
+    "Police exacte inconnue.",
+    "Règles officielles de logo et marges non disponibles.",
+    "Formats proposés pour la production, non mesurés comme formats originaux.",
+    "Une référence photographique/3D ne suffit pas à établir un second style complet."
+  ]
+}

@@ -57,13 +57,14 @@
       h('details', { class: 'more' }, h('summary', {}, U.icon('chevron', 13), 'Options de génération'),
         field('Moteur', h('select', { class: 'input', value: d.provider, 'aria-label': 'Moteur de génération', onchange: (e) => apply(() => { d.provider = e.target.value; }) },
           gens.map((g) => h('option', { value: g.id, disabled: !g.available, text: g.label + (g.available ? '' : ' (non connecté)') })))),
+        toggle('Envoyer les références de style (max. 3)', !!d.useRefs, (v) => apply(() => { d.useRefs = v; })),
         field('Langue du prompt', seg([['en', 'Anglais'], ['fr', 'Français']], d.promptLang, (v) => apply(() => { d.promptLang = v; }), 'seg-wide')))
     ];
   }
   function composeFoot() {
     const g = U.generators[U.doc.provider], busy = !!U.ui.busy;
     return [
-      h('p', { class: 'note' }, U.icon('info', 13), g.kind === 'mock' ? 'Mode démo : le studio compose une maquette abstraite aux couleurs du profil. Aucune IA n’est appelée.' : `Le prompt sera envoyé à ${g.label} via le service UniPop. Aucune image de référence n’est transmise.`),
+      h('p', { class: 'note' }, U.icon('info', 13), g.kind === 'mock' ? 'Mode démo : le studio compose une maquette abstraite aux couleurs du profil. Aucune IA n’est appelée.' : `Le prompt sera envoyé à ${g.label} via le service UniPop. Les références marquées de style sont envoyées uniquement si l’option est activée.`),
       h('div', { class: 'row' },
         U.btn({ label: 'Voir le prompt', icon: 'code', onclick: U.showPrompt }),
         U.btn({ label: busy ? 'Génération…' : 'Générer un visuel', icon: 'wand', class: 'btn-primary btn-grow', disabled: busy, onclick: U.generate }))

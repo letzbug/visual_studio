@@ -1,0 +1,12 @@
+name = "unipop-visual-studio"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-11-24"
+[vars]
+ALLOWED_ORIGIN = "https://letzbug.github.io"
+OPENAI_IMAGE_MODEL = "gpt-image-1"
+[[durable_objects.bindings]]
+name = "QUOTA"
+class_name = "Quota"
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Quota"]

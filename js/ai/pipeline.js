@@ -92,14 +92,22 @@
   /* ---------- ImageGenerator : fournisseurs IA via le Worker ---------- */
   function remote(id, label) {
     return {
-      id, label, kind: 'ai', get available() { return !!U.config.workerUrl; },
+      id, label, kind: 'ai', get available() { return id === 'openai' && !!U.config.workerUrl; },
       async generate(req) {
+        const code = window.prompt('Code d’accès au service de génération (non enregistré)');
+        if (!code) throw new Error('Génération annulée');
+        const refs = await Promise.all((req.refs || []).map(async r => {
+          const im = await createImageBitmap(r.blob); const scale = Math.min(1, 1024 / Math.max(im.width, im.height));
+          const cv = document.createElement('canvas'); cv.width = Math.max(1, Math.round(im.width*scale)); cv.height = Math.max(1, Math.round(im.height*scale));
+          cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height); im.close(); return cv.toDataURL('image/png');
+        }));
         const res = await fetch(U.config.workerUrl.replace(/\/$/, '') + '/generate', {
-          method: 'POST', headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ provider: id, prompt: req.prompt, negative_prompt: req.negative, width: req.width, height: req.height, count: req.count })
+          method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + code },
+          body: JSON.stringify({ provider: id, prompt: req.prompt, negative_prompt: req.negative, width: req.width, height: req.height, count: req.count, refs })
         });
-        if (!res.ok) throw new Error('Le service de génération a répondu ' + res.status + '.');
+        if (!res.ok) { const err = await res.json().catch(() => ({})); throw new Error(err.error || ('Service : ' + res.status)); }
         const data = await res.json();
+        if (!data.images?.length) throw new Error("Aucune image reçue");
         return Promise.all((data.images || []).map(async (im) => ({ blob: await U.dataURLToBlob(`data:${im.mime || 'image/png'};base64,${im.b64}`) })));
       }
     };

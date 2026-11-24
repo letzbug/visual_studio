@@ -8,15 +8,16 @@
     if (U.ui.busy) return;
     const d = U.doc, gen = U.generators[d.provider] || U.generators.mock;
     if (!gen.available) return U.toast(gen.label + ' n’est pas connecté dans cette version', 'error');
-    if (gen.kind === 'ai' && !consent) {
-      consent = await U.confirm('Envoyer le prompt ?', `Le prompt de génération sera envoyé à ${gen.label} par l’intermédiaire du service UniPop. Aucune image de référence n’est transmise.`, 'Envoyer et générer');
-      if (!consent) return;
+    const refs = gen.kind === 'ai' && d.useRefs ? U.refs.filter(r => r.style && !r.excluded).slice(0, 3) : [];
+    if (gen.kind === 'ai') {
+      if (d.useRefs && !refs.length) return U.toast('Marquez au moins une référence de style.', 'error');
+      if (!await U.confirm('Envoyer à OpenAI ?', `Le prompt et ${refs.length} référence(s) seront transmis. Vérifiez vos droits et ne transmettez aucune donnée personnelle. Génération payante.`, 'Envoyer et générer')) return;
     }
     const f = U.currentFormat(), b = U.buildPrompt();
     U.ui.busy = { label: gen.kind === 'mock' ? 'Composition des maquettes' : 'Génération en cours', done: 0, total: d.count };
     U.ui.compare = false; U.emit('ui');
     try {
-      const out = await gen.generate({ prompt: b.prompt, negative: b.negative, width: f.w, height: f.h, count: d.count, profile: U.profile, onProgress: (done, total) => { U.ui.busy.done = done; U.ui.busy.total = total; U.stage.render(); } });
+      const out = await gen.generate({ prompt: b.prompt, negative: b.negative, width: f.w, height: f.h, count: d.count, profile: U.profile, refs, onProgress: (done, total) => { U.ui.busy.done = done; U.ui.busy.total = total; U.stage.render(); } });
       let first = null;
       for (const o of out) { const id = U.uid(); d.images.push({ id, assetId: await U.assetPut(o.blob, 'image'), kind: gen.kind, label: d.subject.trim().slice(0, 60) }); first = first || id; }
       if (first) d.current = first;
@@ -41,7 +42,7 @@
   /* ---------- barre supérieure ---------- */
   function topbar() {
     U.fill($('#topbar'), 
-      h('div', { class: 'brand' }, h('span', { class: 'brand-mark', 'aria-hidden': 'true' }, h('i'), h('i')), h('span', { class: 'brand-name' }, h('b', { text: 'UniPop' }), ' Visual Studio'), h('span', { class: 'chip', text: 'v0.1 démo' })),
+      h('div', { class: 'brand' }, h('span', { class: 'brand-mark', 'aria-hidden': 'true' }, h('i'), h('i')), h('span', { class: 'brand-name' }, h('b', { text: 'UniPop' }), ' Visual Studio'), h('span', { class: 'chip', text: 'v0.2' })),
       h('button', { type: 'button', class: 'cmd-trigger', onclick: U.showPalette }, U.icon('search', 15), h('span', { text: 'Rechercher une action' }), h('kbd', { text: U.mod + ' K' })),
       h('div', { class: 'top-actions' },
         h('span', { class: 'local', title: 'Références, profil et visuels restent dans ce navigateur. Rien n’est envoyé sans action de votre part.' }, U.icon('lock', 13), h('span', { text: 'Données locales' })),
