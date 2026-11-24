@@ -146,7 +146,34 @@
     if (!U.generators[U.doc.provider] || !U.generators[U.doc.provider].available) U.doc.provider = 'mock';
     document.documentElement.dataset.theme = U.ui.theme;
     const saved = await U.db.kvGet('profile');
-    if (saved && saved.profile && U.validateProfile(saved.profile).ok) { U.profile = saved.profile; U.profileMeta = saved.meta; }
+
+if (saved && saved.profile && U.validateProfile(saved.profile).ok) {
+  U.profile = saved.profile;
+  U.profileMeta = saved.meta;
+} else {
+  try {
+    const response = await fetch('./examples/unipop-style-profile-v1.0.json');
+
+    if (!response.ok) throw new Error('Profil indisponible');
+
+    const profile = await response.json();
+
+    if (U.validateProfile(profile).ok) {
+      U.profile = profile;
+      U.profileMeta = {
+        source: 'cameron',
+        importedAt: new Date().toISOString()
+      };
+
+      await U.db.kvSet('profile', {
+        profile: U.profile,
+        meta: U.profileMeta
+      });
+    }
+  } catch (error) {
+    console.warn('Profil Cameron:', error);
+  }
+}
     await U.loadRefs(); await U.loadAssets();
     U.history.reset(); U.applyAccent();
 
