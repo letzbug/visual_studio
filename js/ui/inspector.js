@@ -64,7 +64,7 @@
   function composeFoot() {
     const g = U.generators[U.doc.provider], busy = !!U.ui.busy;
     return [
-      h('p', { class: 'note' }, U.icon('info', 13), g.kind === 'mock' ? 'Mode démo : le studio compose une maquette abstraite aux couleurs du profil. Aucune IA n’est appelée.' : `Le prompt sera envoyé à ${g.label} via le service UniPop. Les références marquées de style sont envoyées uniquement si l’option est activée.`),
+      h('p', { class: 'note' }, U.icon('info', 13), g.kind === 'mock' ? 'Mode démo : le studio compose une maquette abstraite aux couleurs du profil. Aucune IA n’est appelée.' : `${g.label}`),
       h('div', { class: 'row' },
         U.btn({ label: 'Voir le prompt', icon: 'code', onclick: U.showPrompt }),
         U.btn({ label: busy ? 'Génération…' : 'Générer un visuel', icon: 'wand', class: 'btn-primary btn-grow', disabled: busy, onclick: U.generate }))
