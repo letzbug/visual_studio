@@ -5,5 +5,5 @@ window.UVS_CONFIG = {
   version: '0.2',
   // URL du Worker Cloudflare qui relaie les appels vers les API d'images.
   // Vide = aucun fournisseur IA connecté, seul le mode démo est disponible.
-  workerUrl: ''
+  workerUrl: 'https://unipop-visual-studio.letzbug.workers.dev'
 };
