@@ -1,0 +1,229 @@
+{
+  "schema": "unipop.style-profile/1",
+  "name": "UniPop – Identité visuelle",
+  "version": "1.1.0",
+  "author": "Cameron",
+  "createdAt": "2026-11-25",
+  "description": "Analyse de 11 captures UniPop : illustration éditoriale vectorielle dominante, couleurs franches et motifs décoratifs récurrents. Palette indicative, non officielle. Correspondance des sept catégories d’après la capture des cartes UniPop; couleurs échantillonnées, non certifiées.",
+  "palette": [
+    {
+      "name": "Marine",
+      "hex": "#15205C",
+      "role": "primary",
+      "usage": "Fond, texte, pastilles",
+      "confidence": "observed"
+    },
+    {
+      "name": "Vert",
+      "hex": "#3DA66C",
+      "role": "secondary",
+      "usage": "Fond et végétation",
+      "confidence": "observed"
+    },
+    {
+      "name": "Turquoise",
+      "hex": "#AFE0E1",
+      "role": "secondary",
+      "usage": "Fond et pastilles",
+      "confidence": "observed"
+    },
+    {
+      "name": "Jaune soleil",
+      "hex": "#F8D83A",
+      "role": "accent",
+      "usage": "Étoiles et objets",
+      "confidence": "observed"
+    },
+    {
+      "name": "Blanc cassé",
+      "hex": "#FFF8E9",
+      "role": "text",
+      "usage": "Titres et objets",
+      "confidence": "observed"
+    },
+    {
+      "name": "Orange",
+      "hex": "#F16D46",
+      "role": "accent",
+      "usage": "Petits détails",
+      "confidence": "observed"
+    },
+    {
+      "name": "Langues",
+      "hex": "#C45353",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Arts et artisanat",
+      "hex": "#A49204",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Technologies de l’Information et de la Communication (TIC)",
+      "hex": "#4B9561",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Citoyenneté et intégration",
+      "hex": "#625F9A",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Sciences naturelles et mathématiques",
+      "hex": "#976C56",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Sciences humaines et sociales",
+      "hex": "#9D5F91",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    },
+    {
+      "name": "Activité physique et bien-être",
+      "hex": "#AA5A32",
+      "role": "background",
+      "usage": "Fond dominant réservé à cette catégorie",
+      "confidence": "observed"
+    }
+  ],
+  "illustration": {
+    "style": "Illustration éditoriale 2D en aplats, aspect vectoriel, contours rarement visibles, formes arrondies et silhouettes simplifiées.",
+    "imagery": "Objets, gestes, scènes ou adultes stylisés selon le sujet; diversité naturelle, sans groupe de personnages obligatoire.",
+    "keywords": [
+      "flat vector",
+      "editorial illustration",
+      "solid color",
+      "organic shapes",
+      "adult education",
+      "playful minimalism"
+    ],
+    "confidence": "observed"
+  },
+  "composition": {
+    "rules": [
+      "Un sujet principal lisible, éventuellement deux ou trois objets liés.",
+      "Privilégier les grands aplats et une hiérarchie simple.",
+      "Réserver une zone calme pour un éventuel titre ajouté séparément.",
+      "Décorations périphériques peu nombreuses, sans gêner le sujet."
+    ],
+    "layouts": [
+      "Titre en haut, illustration en bas",
+      "Illustration en haut, titre en bas",
+      "Sujet central avec espace négatif"
+    ],
+    "confidence": "observed"
+  },
+  "typography": {
+    "headings": {
+      "family": "Sans-serif arrondie, famille exacte inconnue",
+      "weight": "extra-bold",
+      "case": "Casse naturelle",
+      "confidence": "observed"
+    },
+    "body": {
+      "family": "Sans-serif, famille exacte inconnue",
+      "weight": "regular à medium",
+      "confidence": "observed"
+    },
+    "notes": "Texte blanc sur fond foncé ou marine sur fond clair. Pastilles arrondies pour catégories et dates. Ajouter le texte en calque séparé."
+  },
+  "backgrounds": {
+    "types": [
+      "Aplat coloré",
+      "Aplat avec bande de sol plus sombre",
+      "Dégradé doux exceptionnel"
+    ],
+    "notes": "Identifier la catégorie principale selon le sujet (une catégorie explicitement indiquée prime). Fond dominant obligatoire selon la correspondance suivante : Langues = #C45353 (langues, conversation, grammaire); Arts et artisanat = #A49204 (photo, cinéma artistique, poterie, perles, création manuelle); Technologies de l’Information et de la Communication (TIC) = #4B9561 (informatique, programmation, IA, outils numériques); Citoyenneté et intégration = #625F9A (citoyenneté, intégration, participation civique); Sciences naturelles et mathématiques = #976C56 (nature, sciences, mathématiques); Sciences humaines et sociales = #9D5F91 (histoire, psychologie, société, relations familiales); Activité physique et bien-être = #AA5A32 (sport, relaxation, méditation, santé et bien-être). Les autres couleurs servent uniquement aux éléments secondaires. Si ambigu, choisir la catégorie la plus pertinente; ne jamais utiliser le rose par défaut. Aplats sans dégradé sauf demande explicite.",
+    "confidence": "observed"
+  },
+  "graphicElements": [
+    "Petites étoiles jaunes à quatre pointes",
+    "Boucles et traits fins clairs",
+    "Feuilles tropicales stylisées",
+    "Zigzags fins",
+    "Points colorés",
+    "Ombres elliptiques",
+    "Pastilles arrondies pour métadonnées"
+  ],
+  "branding": {
+    "logoRules": [
+      "Ne jamais générer ni imiter le logo.",
+      "Ajouter uniquement le fichier officiel en calque séparé si demandé.",
+      "Les badges Nordstad sont spécifiques aux campagnes concernées."
+    ],
+    "notes": "Position et taille officielles non établies."
+  },
+  "formats": [
+    {
+      "label": "Portrait 4:5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "label": "Story 9:16",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "label": "Carré",
+      "width": 1080,
+      "height": 1080
+    }
+  ],
+  "generation": {
+    "summary": "Illustration éditoriale UniPop pour la formation des adultes : aplats vectoriels chaleureux, formes simples et organiques, fond franc, accents décoratifs discrets.",
+    "positive": [
+      "Créer une illustration originale en lien direct avec le sujet.",
+      "Appliquer impérativement la couleur de fond de la catégorie principale définie dans les règles de fonds; utiliser les autres couleurs comme accents et pour les personnages et objets.",
+      "Choisir la composition selon le sujet : objet seul, mains en action, une personne, duo, groupe ou scène abstraite. Varier âges, silhouettes, coiffures, vêtements et points de vue; ne pas répéter systématiquement les mêmes personnages.",
+      "Objets lisibles, silhouettes arrondies, aplats opaques, ombres graphiques simples.",
+      "Les étoiles, boucles et feuilles sont facultatives; choisir zéro à deux types de motifs pertinents, sans répétition systématique.",
+      "Préserver un espace négatif utile pour un titre éventuel.",
+      "Par défaut produire uniquement le visuel sans texte, sans logo ni badge; utiliser les calques séparés."
+    ],
+    "negative": [
+      "Photorealisme et stock photo dans le mode illustration standard",
+      "Rendu 3D brillant, plastique, néon, gradients complexes",
+      "Esthétique enfantine, mascottes infantiles, anatomie exagérée",
+      "Fond encombré, détails excessifs, textures réalistes",
+      "Texte inventé, lettres illisibles, filigranes, logos ou badges imités",
+      "Copie exacte des compositions de référence",
+      "Fond rose systématique ou fond d’une autre catégorie que celle choisie",
+      "Groupe récurrent de trois adultes, mêmes visages et mêmes accessoires sans justification"
+    ]
+  },
+  "subjects": [
+    {
+      "title": "Photographie",
+      "prompt": "Arts et artisanat : appareil photo et tirages stylisés sur fond #A49204."
+    },
+    {
+      "title": "Atelier de poterie",
+      "prompt": "Arts et artisanat : mains façonnant un vase sur fond #A49204."
+    },
+    {
+      "title": "Formation numérique",
+      "prompt": "TIC : ordinateur et tablette stylisés sur fond #4B9561."
+    }
+  ],
+  "uncertainties": [
+    "Codes HEX approximatifs issus des captures, non validés par la charte officielle.",
+    "Police exacte inconnue.",
+    "Règles officielles de logo et marges non disponibles.",
+    "Formats proposés pour la production, non mesurés comme formats originaux.",
+    "Une référence photographique/3D ne suffit pas à établir un second style complet.",
+    "Les sept associations catégorie-couleur sont visibles sur la capture; les HEX sont des échantillons du dégradé, pas des codes de charte certifiés."
+  ]
+}
